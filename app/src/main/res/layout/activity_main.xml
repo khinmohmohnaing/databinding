@@ -19,7 +19,7 @@
                 android:id="@+id/btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{temp.celsius+temp.location}"
+                android:text="@{temp.location+temp.celsius}"
                 android:onClick="@{() -> AppPresenter.add()}"
                 />
     </LinearLayout>
