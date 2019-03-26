@@ -4,8 +4,8 @@
     <data>
         <variable
                 name="temp"
-                type="com.example.databindingsampleapp.TemperatureData" />
-        <variable name="AppPresenter" type="com.example.databindingsampleapp.MainPresenter">
+                type="com.example.databindingsampleapp.model.TemperatureData" />
+        <variable name="AppPresenter" type="com.example.databindingsampleapp.view.activity.presenter.MainPresenter">
 
         </variable>
     </data>

@@ -1,5 +1,9 @@
-package com.example.databindingsampleapp
+package com.example.databindingsampleapp.di
 
+import com.example.databindingsampleapp.view.activity.MainActivity
+import com.example.databindingsampleapp.view.activity.presenter.MainPresenter
+import com.example.databindingsampleapp.view.activity.presenterImpl.MainPresenterImpl
+import com.example.databindingsampleapp.view.activity.MainView
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

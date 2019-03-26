@@ -2,20 +2,19 @@ package com.example.databindingsampleapp
 
 
 import android.app.Application
-import dagger.android.DaggerApplication
-import dagger.android.HasActivityInjector
-import io.reactivex.plugins.RxJavaPlugins
-import io.realm.Realm
+import com.example.databindingsampleapp.di.AppComponent
+import com.example.databindingsampleapp.di.DaggerAppComponent
+import com.example.databindingsampleapp.view.activity.MainActivity
 
 
 class App: Application(){
     override fun onCreate() {
         super.onCreate()
-        appComponent=DaggerAppComponent.builder()
+        appComponent= DaggerAppComponent.builder()
             .app(MainActivity())
             .build()
     }
     companion object {
-        var appComponent:AppComponent?=null
+        var appComponent: AppComponent?=null
     }
 }

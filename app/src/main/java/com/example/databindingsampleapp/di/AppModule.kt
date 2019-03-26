@@ -1,9 +1,8 @@
-package com.example.databindingsampleapp
+package com.example.databindingsampleapp.di
 
-import android.app.Application
 import android.content.Context
+import com.example.databindingsampleapp.App
 import dagger.Module
-import javax.inject.Singleton
 import dagger.Provides
 
 
