@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), MainView {
         )
         val temperatureData = TemperatureData("Hamburg", "10")
         binding.setTemp(temperatureData)
-        binding.setAppPresenter(mainPresenter)
+       // binding.setAppPresenter(mainPresenter)
        // mainPresenter?.add()
 
         /*btn.setOnClickListener {
@@ -42,5 +42,10 @@ class MainActivity : AppCompatActivity(), MainView {
     }
     private fun getApp(): AppComponent? {
         return App.appComponent
+    }
+
+    override fun onResume() {
+        super.onResume()
+       // mainPresenter.add()
     }
 }
