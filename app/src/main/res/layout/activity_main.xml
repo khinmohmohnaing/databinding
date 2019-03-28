@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -14,14 +16,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            tools:context="com.example.databindingsampleapp.view.activity.MainActivity"
     >
         <Button
-                android:id="@+id/btn"
+                android:id="@+id/clickBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@{temp.location+temp.celsius}"
                 android:onClick="@{() -> AppPresenter.add()}"
-                />
+        />
+        <Button
+                android:text="Show data model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> AppPresenter.showTempData(temp)}"
+                android:id="@+id/button" />
+        <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
     </LinearLayout>
 </layout>
 
